@@ -21,9 +21,16 @@
 #Get-ChildItem | Where-Object -Property Name -Like -Value "*.txt"
 #Get-ChildItem | Where-Object -Property Name -Like -Value "*.TXT" 
 #Get-ChildItem | Where-Object -Property Name -CLike -Value "*.TXT" 
-#Get-ChildItem | Where-Object -Property Name -Match -Value "sample\d+\.txt"
+#Get-ChildItem | Where-Object -Property Name -Match -Value "sample\d+\.txt" 
 #Get-ChildItem | Where-Object Name -EQ "sample1.txt"
 #Get-ChildItem | Where-Object -FilterScript {$_.Name -EQ "sample1.txt"}
+#Get-ChildItem | Where-Object -FilterScript {$_.Name -match "sample\d+.txt" -or $_.Name -match "example\d+.txt"} 
+
+#Get-ChildItem | Sort-Object -Property Name 
+#Get-ChildItem | Sort-Object -Property Name -Descending
+#Get-ChildItem | Sort-Object -Property Mode,Name -Descending
+#Get-ChildItem | Sort-Object -Property @{Expression="Mode";Descending=$true},@{Expression="Name";Descending=$false}
+
 
 
 
