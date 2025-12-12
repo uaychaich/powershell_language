@@ -1,0 +1,10 @@
+C:\inetpub
+C:\Packages
+C:\PerfLogs
+C:\Program Files
+C:\Program Files (x86)
+C:\Project
+C:\Temp
+C:\Users
+C:\Windows
+C:\WindowsAzure

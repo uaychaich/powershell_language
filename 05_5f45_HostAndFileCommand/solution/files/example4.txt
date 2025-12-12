@@ -1,0 +1,16 @@
+
+    Directory: C:\
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           11/9/2025  5:19 PM                inetpub
+d----           12/2/2025 10:43 AM                Packages
+d----            4/1/2024  2:02 PM                PerfLogs
+d-r--          12/10/2025 10:18 AM                Program Files
+d-r--           11/9/2025  5:26 PM                Program Files (x86)
+d----           12/3/2025  8:42 AM                Project
+d----           11/9/2025  6:12 PM                Temp
+d-r--           12/2/2025 10:41 AM                Users
+d-r--          12/10/2025  8:32 AM                Windows
+d----          12/12/2025  9:42 AM                WindowsAzure
+
