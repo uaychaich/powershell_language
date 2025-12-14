@@ -26,14 +26,14 @@ Set-Location -Path "$PSScriptRoot/files"
 
 #----------------------------------------------
 
-# Get-ChildItem -PipelineVariable fileitem | 
-#     Get-Content -PipelineVariable lineitem | 
-#     ForEach-Object {Write-Host "File: $($fileitem.Name) Line: $lineitem"}
+# Remove-Item -Path .\file1.txt -WhatIf
+# Remove-Item -Path .\file2.txt -Confirm
 
 #----------------------------------------------
 
-# Remove-Item -Path .\file1.txt -WhatIf
-# Remove-Item -Path .\file2.txt -Confirm
+# Get-ChildItem -PipelineVariable fileitem | 
+#     Get-Content -PipelineVariable lineitem | 
+#     ForEach-Object {Write-Host "File: $($fileitem.Name) Line: $lineitem"}
 
 #----------------------------------------------
 
