@@ -1,21 +1,27 @@
-$currentscriptfolder =  $PSScriptRoot;
-Set-Location -Path "$currentscriptfolder/files";
+try {
+    $a = 5;
+    $b = 0;
+    $c = $a / $b;
+    Write-Host "The result is $c"
+}
+catch {
+    Write-Host "Something went wrong";
+    Write-Host "$Error `n"
+    Write-Host "$($_.Exception.Message)"
+}
+finally{
+    $Error.Clear();
+    Write-Host "Execution of the script is complete."
+}
 
 #----------------------------------------------------------
 
-# foreach ($file in Get-ChildItem -Path . -Filter *.txt) {
-#     $content = Get-Content -Path $file.FullName;
-#     if (($null -eq $content) -or ($content -eq "")) {
-#         Write-Host "The file '$($file.Name)' is empty.";
-#     }
-#     else{
-#         Write-Host "The file '$($file.Name)' is not empty. and the content is: $content";
-#     }
+# try {
+#     Set-Location -Path "C:\Projects\MyApp" -ErrorAction Stop
 # }
-
-#----------------------------------------------------------
-
-# switch (Get-ChildItem -Path . -Filter *.txt) {
-#     {(((Get-Content -Path $_) -eq "") -or ($null -eq (Get-Content -Path $_)))} {Write-Host "The file '$($_.Name)' is empty."}
-#     Default {Write-Host "The file '$($_.Name)' is not empty. and the content is: $(Get-Content -Path $_)";}
+# catch {
+#     Write-Host "The specified path does not exist."
+# }
+# finally{
+#     Write-Host "Execution of the script is complete."
 # }
