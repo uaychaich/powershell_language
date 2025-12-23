@@ -1,0 +1,1 @@
+Get-ChildItem | select-Object Name, Length
