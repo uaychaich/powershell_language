@@ -7,7 +7,7 @@ function Get-UayChildItem2($param1, $param2) {
 }
 
 function Get-UayChildItem3([string]$param1, [double]$param2) {
-    Write-Host "$param1 $param2"
+    Write-Host "$param1 $param2";
 }
 
 function Get-UayChildItem4 {
@@ -28,7 +28,7 @@ function Get-UayChildItem5 {
 function Get-UayChildItem6{
     [CmdletBinding()]
     param([Parameter(Mandatory=$false)][string]$param1="Uay")
-    process {Write-Host "`$param1=$param1"}
+    process {Write-Host "`$param1=$param1";}
 }
 
 function Get-UayChildItem7{
@@ -238,6 +238,75 @@ function Get-UayChildItem23 {
 
 function Get-UayChildItem24 {
     [CmdletBinding()]
+    param ()
+    process {
+        Write-Debug "This is debug message from Get-UayChildItem24";
+        Write-Verbose "This is verbose message from Get-UayChildItem24";
+        Write-Information "This is information message from Get-UayChildItem24";
+        Write-Warning "This is warning message from Get-UayChildItem24";
+        Write-Error "This is error message from Get-UayChildItem24";
+        Write-Progress -Activity "Get-UayChildItem24 Progress" -Status "Processing..." -PercentComplete 50;
+        Start-Sleep -Seconds 2;
+        Write-Progress -Activity "Get-UayChildItem24 Progress" -Status "Processing..." -PercentComplete 100 -Completed;
+        Write-Host "Get-UayChildItem24 completed.";
+    }
+}
+
+function Get-UayChildItem25 {
+    <#
+    .SYNOPSIS
+        This is Synopsis for Get-UayChildItem25 function.
+        เนื้อหาย่อหน้าแรกที่สรุปใจความสำคัญของฟังก์ชันนี้
+
+    .DESCRIPTION
+        This is Description for Get-UayChildItem25 function.
+        เนื้อหาย่อหน้าที่สองที่อธิบายรายละเอียดเพิ่มเติมเกี่ยวกับฟังก์ชันนี้
+
+    .PARAMETER param1
+        param1 specifies the name of the computer on which to run this command.
+        param1 ระบุชื่อคอมพิวเตอร์ที่ต้องการรันคำสั่งนี้
+
+    .PARAMETER param2
+        param2 specifies the user account that has permission to perform this action.
+        param2 ระบุบัญชีผู้ใช้ที่มีสิทธิ์ในการดำเนินการนี้
+
+    .EXAMPLE
+         Get-UayChildItem25
+
+    .EXAMPLE
+         Get-UayChildItem25 -param1 "Server1"
+
+    .EXAMPLE
+        Get-UayChildItem25 -param1 "Server1" -param2 "Administrator"
+
+    .INPUTS
+        String
+
+    .OUTPUTS
+        String
+
+    .NOTES
+        Author:  Uaychai Chotjaratwanich
+        Website: uaychai@xyz.com
+        Twitter: @uay
+    
+    .LINK
+        http://www.fabrikam.com/extension.html
+
+    .LINK
+        Get-UayChildItem25
+    #>
+    [CmdletBinding()]
+    param ([string]$param1,[string]$param2)
+    process {
+        Write-Host "Get-UayChildItem25 executed. `$param1=$param1, `$param2=$param2";
+    }
+}
+
+
+
+function Get-UayChildItem30 {
+    [CmdletBinding()]
     param (
         [ArgumentCompletions("Option1","Option2","Option3")]
         [string]$param
@@ -280,3 +349,6 @@ function Test-ArgumentCompleter {
         $Value
       )
 }
+
+
+#---------------------------------------------------------------

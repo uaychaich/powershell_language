@@ -78,17 +78,38 @@ Set-Location $PSScriptRoot
 # Get-UayChildItem23 -EventDate "2030-12-25 13:57:22"
 # Get-UayChildItem23 -EventDate "2020-12-25 13:57:22"
 
-# Get-UayChildItem24 -param Option1
+# $DebugPreference = "Continue"
+# Get-UayChildItem24 -Debug -Verbose `
+#     -InformationAction Continue `
+#     -WarningAction Continue `
+#     -ErrorAction Continue `
+#     -ProgressAction Continue
+
+# Get-Help Get-UayChildItem25 -Full
+
+# Get-UayChildItem30 -param Option1
 
 # Test-ArgumentCompleter -Type Vegetables -Value Onion
 
 #--------------------------------------------------------------
 
 # Set-Location -Path $PSScriptRoot
-# # New-Item -ItemType Directory -Path "UayDirectory" 
-# . .\uayscript3.ps1
-# Remove-UayDirectoryOnlyV1 -Path "UayDirectory" -Recurse:$false 
+# New-Item -ItemType Directory -Path "UayDirectory" 
+# New-Item -ItemType File -Path "UayDirectory\File1.txt"
+# New-Item -ItemType File -Path "UayDirectory\File2.log"
+# New-Item -ItemType Directory -Path "UayDirectory\SubDirectory1"
+# New-Item -ItemType File -Path "UayDirectory\SubDirectory1\File3.txt"
+# New-Item -ItemType Directory -Path "UayDirectory\SubDirectory2"
+# New-Item -ItemType File -Path "UayDirectory\SubDirectory2\File4.log"
 
+# . .\uayscript3.ps1
+# Remove-UayChildItem -Path "UayDirectory" -File 
+# Remove-UayChildItem -Path "UayDirectory" -Directory -Recurse
+
+# $DebugPreference = "Continue"
+# Remove-UayChildItem -Path "UayDirectory" -File -Directory -Recurse -Verbose -Debug -ProgressAction Continue
+
+# Get-Help Remove-UayChildItem -Full
 #--------------------------------------------------------------
 
 

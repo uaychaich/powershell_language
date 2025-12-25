@@ -28,7 +28,7 @@ $data14 = @([PSCustomObject]@{ FirstName="Uaychai"; Age=25 }, [PSCustomObject]@{
 # Write-Host "`$data2=$data2 $($data2.GetType())"
 # Write-Host "`$data3=$data3 $($data3.GetType())"
 # Write-Host "`$data4=$data4 $($data4.GetType())"
-# Write-Host "`$data5=$data5 $($data5.GetType())"
+# Write-Host "`$data5=$data5 $($data5.IsPresent) $($data5.GetType())"
 # Write-Host "`$data6=$data6 $($data6.GetType())"
 # Write-Host "`$data7=$data7 $($data7.GetType())"
 # Write-Host "`$data8=$data8 $($data8.GetType())"
