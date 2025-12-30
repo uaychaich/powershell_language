@@ -1,6 +1,21 @@
+# Set-Location $PSScriptRoot
 # Get-Command -Noun PSSession
+# Invoke-Command -ComputerName localhost -ScriptBlock { Get-Process -Name pwsh }
+# $result=Invoke-Command -ComputerName localhost -ScriptBlock { Get-Process -Name pwsh }
+# $result | Format-Table -AutoSize
 #-------------------------------------------------
 
+# Set-Location $PSScriptRoot
+# Invoke-Command -ComputerName localhost -ScriptBlock { $s1=25 }
+# Invoke-Command -ComputerName localhost -ScriptBlock { "`$s1=$s1" }
+
+# $uaysession = New-PSSession -ComputerName localhost 
+# Invoke-Command -Session $uaysession -ScriptBlock {$s2=25}
+# Invoke-Command -Session $uaysession -ScriptBlock {"`$s2=$s2"}
+
+#-------------------------------------------------
+
+# Set-Location $PSScriptRoot
 # Get-Process -Name pwsh
 # Set-Location $PSScriptRoot
 # Get-PSSession | Remove-PSSession -Confirm 
@@ -29,6 +44,7 @@
 
 # Set-Location $PSScriptRoot
 # Get-PSSession | Remove-PSSession -Confirm
+# Get-Job | Remove-Job -Confirm
 # $uaysession = New-PSSession -Name UaySession -ComputerName localhost
 # Get-PSSession | Format-Table -AutoSize
 # Invoke-Command -Session $uaysession -ScriptBlock {
@@ -43,21 +59,18 @@
 
 # Set-Location $PSScriptRoot
 # Get-PSSession | Remove-PSSession -Confirm 
+# Get-Job | Remove-Job -Confirm
 # $uaysession = New-PSSession -Name UaySession -ComputerName localhost
 # Get-PSSession | Format-Table -AutoSize
 # Invoke-Command -Session $uaysession -ScriptBlock {
 #     Start-Sleep -Seconds 15
 #     "Background job complete"
 #     Get-Process -Name pwsh
-# } -AsJob -JobName "UayRemoteJob1" 
+# } -AsJob -JobName "UayRemoteJob1"
 # Disconnect-PSSession -Session $uaysession
-# Write-Host "Session disconnected. Checking job status..."
-# Get-Job -Name "UayRemoteJob1"
-# Get-PSSession
 # Receive-PSSession -Session $uaysession -OutTarget Job -JobName "UayRemoteJob1"
-# Write-Host "Reconnected to session. Checking job status..."
 # Get-Job -Name "UayRemoteJob1"
-# Get-PSSession
+# Get-PSSession | Format-Table -AutoSize
 # Receive-Job -Name "UayRemoteJob1" -Wait -AutoRemoveJob
 
 #-------------------------------------------------
