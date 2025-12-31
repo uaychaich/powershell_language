@@ -13,6 +13,10 @@
 # Invoke-Command -Session $uaysession -ScriptBlock {$s2=25}
 # Invoke-Command -Session $uaysession -ScriptBlock {"`$s2=$s2"}
 
+# $uaydata1 = "uay1";$uaydata2 = "uay2";
+# Invoke-Command -ComputerName localhost -ScriptBlock { "`$uaydata1=$uaydata1 | `$uaydata2=$using:uaydata2" }
+# Invoke-Command -Session $uaysession -ScriptBlock {"`$uaydata1=$uaydata1 | `$uaydata2=$using:uaydata2"}
+
 #-------------------------------------------------
 
 # Set-Location $PSScriptRoot
