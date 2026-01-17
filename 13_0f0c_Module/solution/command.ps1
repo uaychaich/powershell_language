@@ -39,3 +39,10 @@
 
 # Uninstall-Module -Name UayModule 
 # Uninstall-Module -Name UayModule.Sub1 
+
+#---------------------------------------------------------------------
+
+# Save-Module -Name UayModule -Repository UayRep -Path c:\saved
+# Save-Module -Name UayModule.Sub1 -Repository UayRep -Path c:\saved
+
+#---------------------------------------------------------------------
