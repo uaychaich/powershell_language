@@ -1,0 +1,4 @@
+dotnet new install Microsoft.PowerShell.Standard.Module.Template
+
+dotnet new list
+

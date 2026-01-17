@@ -1,0 +1,1 @@
+Import-Module .\bin\Debug\netstandard2.0\CmdLetModule.dll

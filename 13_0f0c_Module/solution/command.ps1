@@ -6,6 +6,9 @@
 # $PSModuleAutoLoadingPreference='ModuleQualified'
 # $PSModuleAutoLoadingPreference='None'
 #---------------------------------------------------------------------
+# Import-Module -Name .\UayModule\UayModule.psd1
+# Import-Module -Name .\UayModule.Sub1\UayModule.Sub1.psd1
+#---------------------------------------------------------------------
 # Get-Module
 # Get-Module -All
 #---------------------------------------------------------------------
